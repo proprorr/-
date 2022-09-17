@@ -1,0 +1,723 @@
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+}
+
+*,
+*:before,
+*:after {
+   box-sizing: border-box
+}
+
+:focus,
+:active {
+   outline: none;
+}
+
+a:focus,
+a:active {
+   outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+   display: block;
+}
+
+html,
+body {
+   height: 100%;
+   width: 100%;
+   font-size: 100%;
+   line-height: 1;
+   font-size: 14px;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+   font-family: inherit;
+}
+
+input::-ms-clear {
+   display: none;
+}
+
+button {
+   cursor: pointer;
+}
+
+button::-moz-focus-inner {
+   padding: 0;
+   border: 0;
+}
+
+a,
+a:visited {
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+ul li {
+   list-style: none;
+}
+
+img {
+   vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-size: inherit;
+   font-weight: 400;
+}
+
+
+body {
+   font-family: 'Barlow', sans-serif;
+   transition: all 0.3s;
+}
+
+.wrapper {
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+
+.header {
+   background-image: url(../img/vitamini.webp);
+   background-repeat: no-repeat;
+   height: 40%;
+   background-position: center;
+   background-size: cover;
+   border-radius: 0px 0px 30px 30px;
+}
+
+.container {
+   max-width: 1260px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
+.header__body {
+   display: flex;
+   justify-content: space-between;
+   padding: 15px 0px;
+}
+
+.header__logo-title {
+   display: flex;
+   align-items: center;
+}
+
+.header__logo {}
+
+.header__title {
+   font-size: 24px;
+   color: black;
+   font-weight: bold;
+   padding-left: 8px;
+   padding-top: 3px;
+   line-height: 32px;
+}
+
+.header__items {
+   display: flex;
+   align-items: center;
+}
+
+.header__list {
+   padding-left: 30px;
+}
+
+.header__link {
+   font-size: 18px;
+   line-height: 24px;
+   color: black;
+   font-weight: 600;
+}
+
+
+
+.header__burger-content {
+   width: 35px;
+   height: 40px;
+   position: absolute;
+   top: 34px;
+   right: 30px;
+   display: none;
+   z-index: 2;
+}
+
+.header__burger::before {
+   content: "";
+   width: 100%;
+   height: 5px;
+   background-color: black;
+   position: absolute;
+   transition: all 0.3s;
+}
+
+.header__burger::after {
+   content: "";
+   width: 100%;
+   height: 5px;
+   background-color: black;
+   position: absolute;
+   margin-top: 20px;
+   transition: all 0.3s;
+}
+
+.header__burger span {
+   width: 100%;
+   height: 5px;
+   background-color: black;
+   position: absolute;
+   margin-top: 10px;
+   transition: all 0.3s;
+}
+
+
+
+
+
+.content {
+   padding-top: 90px;
+   flex: 1 1 auto;
+}
+
+.content__body {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.content__img {
+   box-shadow: 18px 14px 22px 11px rgba(0, 0, 0, 0.59);
+   border-radius: 20px;
+}
+
+.content__img img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 20px;
+}
+
+.content__images {
+   max-width: 600px;
+   height: 400px;
+   border-radius: 20px;
+}
+
+.content__text {
+   max-width: 500px;
+   font-size: 24px;
+   line-height: 38px;
+   font-weight: 500;
+}
+
+
+
+
+
+.catalog {
+   padding-top: 100px;
+}
+
+.catalog-vitamins-badi {
+   display: flex;
+   justify-content: space-around;
+}
+
+.catalog-vitamins img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 20px;
+}
+
+.catalog-images-vitamins {
+   max-width: 540px;
+   height: 330px;
+   margin-right: 10px;
+}
+
+.catalog-lekarstwo img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 20px;
+}
+
+.catalog-lekarstwo,
+.catalog-vitamins {
+   transition: all 0.3s;
+}
+
+.catalog-images-lekarstwo {
+   max-width: 540px;
+   height: 330px;
+   margin-left: 10px;
+}
+
+.catalog-lekarstwo:hover {
+   opacity: 0.8;
+}
+
+.catalog-vitamins:hover {
+   opacity: 0.8
+}
+
+
+.catalog-vitamini-body {
+   position: relative;
+}
+
+.catalog-lekarstwo-body {
+   position: relative;
+}
+
+
+.catalog-vitamins::before {
+   content: 'Каталог с витаминами';
+   position: absolute;
+   top: 50%;
+   text-align: center;
+   font-size: 40px;
+   font-weight: 700;
+   width: 100%;
+   height: 30px;
+   color: black;
+   opacity: 1;
+   line-height: 40px;
+}
+
+.catalog-lekarstwo::before {
+   content: 'Каталог с лекарствами';
+   position: absolute;
+   top: 50%;
+   text-align: center;
+   font-size: 40px;
+   font-weight: 700;
+   width: 100%;
+   height: 30px;
+   color: black;
+   opacity: 1;
+   line-height: 40px;
+}
+
+
+
+
+.section-contacts {
+   padding-top: 30px;
+   padding-bottom: 30px;
+   background-color: rgb(153, 149, 149);
+   margin-top: 70px;
+}
+
+.container {}
+
+.contacts-body {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+
+.telegram-body {
+   display: flex;
+   align-items: center;
+   padding-left: 20px;
+}
+
+.telegram {
+   width: 80px;
+   display: block;
+}
+
+.telegram-tel {
+   padding-left: 30px;
+   font-size: 29px;
+   color: black;
+   letter-spacing: 2px;
+   font-weight: 700;
+   line-height: 40px;
+}
+
+.whatsapp-body {
+   align-items: center;
+   display: flex;
+}
+
+.whatsapp {
+   width: 80px;
+   display: block;
+}
+
+.whatsapp-tel {
+   padding-left: 30px;
+   font-size: 29px;
+   color: black;
+   letter-spacing: 2px;
+   font-weight: 700;
+   line-height: 40px;
+}
+
+
+
+
+
+.catalog__vitamins {
+   margin-top: 100px;
+   margin-bottom: 30px;
+   flex: 1 1 auto;
+}
+
+.catalog__vitamins-items {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   margin: 0 auto;
+   align-items: center;
+   max-width: 980px;
+}
+
+.catalog__vitamins-item {
+   max-width: 310px;
+   height: 420px;
+   /*    border: 2px solid rgb(126, 120, 120); */
+   border-radius: 15px;
+}
+
+.catalog__vitamins-item-body {
+   text-align: center;
+   padding-left: 10px;
+}
+
+.catalog__vitamins-item-img {
+   padding-top: 45px;
+   padding-bottom: 10px;
+   /*    border-bottom: 2px solid rgb(126, 120, 120); */
+}
+
+.catalog__vitamins-item-image {
+   height: 275px;
+   text-align: center;
+}
+
+.catalog__vitamins-item-text {
+   padding-top: 17px;
+   line-height: 32px;
+   font-size: 25px;
+   font-weight: 700;
+   padding-bottom: 5px;
+}
+
+
+.more {
+   text-align: center;
+   padding-top: 20px;
+}
+
+.catalog-more {
+   color: black;
+   font-size: 30px;
+   font-weight: 700;
+}
+
+.lekarstwo-catalog-more {
+   font-size: 18px;
+   padding-top: 5px;
+}
+
+.content__text-product {
+   font-size: 24px;
+   max-width: 700px;
+   padding-left: 50px;
+}
+
+.contact {
+   flex: 1 1 auto;
+   max-width: 800px;
+   margin: 0 auto;
+   padding-top: 40px;
+}
+
+.contact-body {
+}
+
+.telegram-content {
+   display: flex;
+   align-items: center;
+}
+
+.telegram {
+   width: 80px;
+   display: block;
+}
+
+.telegram-telephone {
+   padding-left: 30px;
+   font-size: 29px;
+   color: black;
+   letter-spacing: 2px;
+   font-weight: 700;
+   line-height: 40px;
+}
+
+.whatsapp-content {
+   display: flex;
+   align-items: center;
+   padding-top: 25px;
+}
+
+.whatsapp {
+   width: 80px;
+   display: block;
+}
+
+.whatsapp-telephone {
+   padding-left: 30px;
+   font-size: 29px;
+   color: black;
+   letter-spacing: 2px;
+   font-weight: 700;
+   line-height: 40px;
+}
+
+
+
+@media(max-width: 1140px) {
+   .content__body {
+      flex-direction: column;
+   }
+
+   .content__text {
+      padding-bottom: 40px;
+   }
+}
+
+@media(max-width: 800px) {
+   .catalog__vitamins-items {
+      max-width: 700px;
+   }
+}
+
+@media(max-width: 500px) {
+   .catalog__vitamins-items {
+      justify-content: center;
+   }
+}
+
+@media(max-width: 710px) {
+   .header__burger-content.header__burger-active .header__burger::before {
+      transform: rotate(50deg);
+      top: 15px;
+   }
+
+   .header__burger-content.header__burger-active .header__burger::after {
+      transform: rotate(-50deg);
+      bottom: 19px;
+   }
+
+   .header__burger-content.header__burger-active .header__burger span {
+      display: none;
+   }
+
+
+   body.header__burger-active::before {
+      content: '';
+      position: absolute;
+      background-color: #fff;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+   }
+
+
+   .header__items {
+      position: absolute;
+      left: 30%;
+      top: -100%;
+      display: block;
+      transition: all 0.3s;
+      z-index: 99;
+      text-align: center;
+   }
+
+   .header__items.header__burger-active {
+      top: 20%;
+   }
+
+   .header__list {
+      padding-top: 50px;
+   }
+
+   .header__link {
+      font-size: 25px;
+   }
+
+   .header__burger-content {
+      display: block;
+   }
+
+   .catalog {
+      padding-top: 50px;
+   }
+
+   .catalog-vitamins-badi {
+      text-align: center;
+   }
+
+   .catalog-vitamins-badi {
+      flex-direction: column;
+   }
+
+   .content__text-product {
+      padding-top: 30px;
+   }
+
+   .catalog-images-lekarstwo {
+      margin-left: 0px;
+      margin-top: 30px;
+   }
+
+   .catalog-images-vitamins {
+      margin-right: 0px;
+   }
+
+   .contacts-body {
+      flex-direction: column;
+   }
+
+   .catalog__vitamins {
+      margin-top: 50px;
+   }
+
+   .content__text-product{
+      padding-top: 35px;
+   }
+}
+
+@media(max-width: 520px) {
+   .content {
+      padding-top: 50px;
+   }
+
+   .content__text {
+      max-width: 100%;
+      font-size: 22px;
+      line-height: 35px;
+      font-weight: 600;
+   }
+
+   .content__text {
+      padding-bottom: 20px;
+   }
+
+   .telegram-body {
+      padding-left: 0px;
+   }
+
+   .whatsapp-body {
+      padding-top: 30px;
+   }
+
+   .catalog__vitamins-item-text {
+      padding-top: 13px;
+      line-height: 32px;
+      font-size: 21px;
+      font-weight: 700;
+      padding-bottom: 5px;
+   }
+}
+
+@media(max-width: 444px) {
+   .header__title {
+      max-width: 200px;
+   }
+
+   .header__list {
+      padding-left: 0px;
+   }
+
+   .content__text {
+      max-width: 100%;
+      font-size: 18px;
+      line-height: 32px;
+      font-weight: 600;
+   }
+
+   .contact {
+      flex: 1 1 auto;
+      max-width: 600px;
+      margin: 0 auto;
+      padding-top: 20px;
+   }
+
+   .telegram-telephone {
+      padding-left: 20px;
+      font-size: 23px;
+      color: black;
+      letter-spacing: 2px;
+      font-weight: 700;
+      line-height: 40px;
+   }
+
+   .whatsapp-telephone{
+      padding-left: 20px;
+      font-size: 23px;
+      color: black;
+      letter-spacing: 2px;
+      font-weight: 700;
+      line-height: 40px;
+   }
+
+}
+
+@media(max-width: 375px) {
+   .whatsapp-tel {
+      padding-left: 25px;
+      font-size: 24px;
+      color: black;
+      letter-spacing: 2px;
+      font-weight: 700;
+      line-height: 40px;
+   }
+
+   .telegram-tel {
+      padding-left: 25px;
+      font-size: 24px;
+      color: black;
+      letter-spacing: 2px;
+      font-weight: 700;
+      line-height: 40px;
+   }
+}
+
+@media(max-width: 348px) {
+   .content__text {
+      max-width: 100%;
+      font-size: 16px;
+      line-height: 32px;
+      font-weight: 600;
+   }
+
+}
